@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OS IT</title>
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+        <!-- css link -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-white>
+    <!-- header start here -->
+     <header class="bg-white text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <div class="header-content ">
+                <div class="header-logo">
+                    <a href="index.html"> <img  src="images/logo.jpg"></a>
+
+                </div>
+                <div class=" sourcing-text font-bold text-[#051744] text-lg">
+                    Proudly Australian owned and operated
+                </div>
+                <div class="social-icons ">
+                    <a href="https://www.facebook.com/" target="_blank" class="text-[#051744]">
+                        <i class=" fa-2x fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://twitter.com/" target="_blank" class="ml-6 text-[#051744]">
+                        <i class=" fa-2x fab fa-twitter"></i>
+                    </a>
+                    
+
+                    <a href="https://www.whatsapp.com/" target="_blank" class="ml-6 text-[#051744]">
+                        <i class=" fa-2x fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/login" target="_blank" class="ml-6 text-[#051744]">
+                        <i class=" fa-2x fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+
+        <!-- navbar start here -->
+
+        <nav class="bg-[#051744] hover:red">
+            <div class="max-w-7xl mx-auto px-4 ">
+                <div class="flex justify-between h-16">
+                    <div class="flex space-x-4">
+                        <!-- Mobile menu button -->
+                        <div class="flex items-center md:hidden">
+                            <button id="menuButton" class="text-white focus:outline-none">
+                                <i class="fas fa-bars"></i>
+                            </button>
+                        </div>
+                        <!-- Mobile menu drawer -->
+                        <div id="menuDrawer" class="fixed inset-y-0 left-0 bg-blue-800 w-64 p-4 z-50 md:hidden">
+                            <button id="closeButton" class="text-white focus:outline-none mb-4">
+                                <i class="fas fa-times"></i>
+                            </button>
+                            <a href="index.html" class="block py-2 px-3 text-white hover:bg-blue-700">Home</a>
+                            <div class="dropdown">
+                                <a href="#" class="block py-2 px-3 text-white hover:bg-blue-700">Company</a>
+                                <div class="dropdown-menu">
+                                    <a href="#">About Us</a>
+                                    <a href="#">Why Us?</a>
+                                    <a href="#">Our Team</a>
+                                    <a href="#">Photo Gallery</a>
+                                    <a href="#">Career</a>
+                                </div>
+                            </div>
+                            <div class="dropdown">
+                                <a href="#" class="block py-2 px-3 text-white hover:bg-blue-700">Services</a>
+                                <div class="dropdown-menu">
+                                    <div class="dropdown">
+                                        <a href="#">Retail Service</a>
+                                        <a href="#">Commercial Service</a>
+                                        <a href="#">Corporate Service</a>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <a href="#" class="block py-2 px-3 text-white hover:bg-blue-700">Contact Us</a>
+                        </div>
+                        <!-- Primary Navigation Menu -->
+                        <div class="hidden md:flex items-center space-x-1">
+                            <a href="index.html" class="text-white py-2 px-3 hover:bg-blue-700">Home</a>
+                            <div class="dropdown relative">
+                                <a href="#" class="text-white py-2 px-3 hover:bg-blue-700">Company</a>
+                                <div class="dropdown-menu absolute hidden">
+                                    <a href="#">About Us</a>
+                                    <a href="#">Why Us?</a>
+                                    <a href="#">Our Team</a>
+                                    <a href="#">Photo Gallery</a>
+                                    <a href="#">Career</a>
+                                </div>
+                            </div>
+                            <div class="dropdown relative">
+                                <a href="#" class="text-white  py-2 px-3 hover:bg-blue-700">Services</a>
+                                <div class="dropdown-menu absolute hidden">
+                                    <div class="dropdown relative">
+                                        <a href="#">Retail Service</a>
+                                        <a href="#">Commercial Service</a>
+                                        <a href="#">Corporate Service</a>
+                                    </div>  
+                                </div>
+                            </div>
+                            
+                            <a href="#" class="text-white py-2 px-3 hover:bg-blue-700">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- navbar start here -->
+
+    </header>
+    <!-- header end here -->
+
+        
+
+
+
+
+      
+
+
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- javascipt code  -->
+    <script>
+        document.getElementById('menuButton').addEventListener('click', function () {
+            document.getElementById('menuDrawer').classList.add('active');
+        });
+        document.getElementById('closeButton').addEventListener('click', function () {
+            document.getElementById('menuDrawer').classList.remove('active');
+        });
+
+
+
+    </script>
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            loop: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            autoplay: {
+                delay: 3000,
+            }
+        });
+    </script>
+</body>
+</html>
